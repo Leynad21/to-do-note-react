@@ -9,9 +9,8 @@ const AddNote = ({ clicked, setClicked, addNote, toDoEdit, settoDoEdit, updateNo
 
 
     useEffect(() => {
-        console.log('use effect')
-        setClicked(!clicked)
         if (toDoEdit.edit === true) {
+            setClicked(!clicked)
             setNote(() => {
                 return {
                     'title': toDoEdit.item.title,

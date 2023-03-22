@@ -1,14 +1,21 @@
 import React, { useState } from 'react'
 import { BsFillPlusSquareFill } from 'react-icons/bs'
 
-const AddButton = ({ getClicked }) => {
+const AddButton = ({ getClicked, settoDoEdit }) => {
     const [clicked, setClicked] = useState(false)
 
     const handleClick = () => {
         getClicked(clicked)
-        return (
-            setClicked(!clicked)
+        setClicked(!clicked)
+        settoDoEdit(prevValue => {
+            return {
+                item: "",
+                id: "",
+                edit: false
+            }
+        }
         )
+
     }
 
 

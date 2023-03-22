@@ -58,7 +58,6 @@ function App() {
   }
 
   const updateNote = (id, updNote) => {
-    console.log("udpate", id, updNote)
     settoDoList(
       toDoList.map((item, index) => {
         if (index === id) {
@@ -74,7 +73,10 @@ function App() {
   return (
     <>
       <div className="container">
-        <AddButton getClicked={getClicked} />
+        <AddButton
+          getClicked={getClicked}
+          toDoEdit={toDoEdit}
+          settoDoEdit={settoDoEdit} />
         <div className={` ${clicked ? "container__addNote" : 'hidden'}`}>
           <AddNote
             clicked={clicked}
