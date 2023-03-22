@@ -1,0 +1,242 @@
+/* utils classes */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0.5;
+    z-index: 2;
+    filter: blur(3px);
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* utils classes */
+
+
+/* App */
+
+.app-title {
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 5rem;
+}
+
+/* End of App */
+
+/* AddButton */
+
+.plus-icon {
+    background: transparent;
+    border-radius: 1rem;
+    font-size: 4rem;
+    color: var(--color-accent);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    transition: var(--transition);
+    z-index: 3;
+}
+
+.plus-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+/* End of AddButton */
+
+
+
+
+/* Card */
+
+.container__card {
+    background-color: var(--color-primary);
+    color: var(--color-text-variant);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--color-bg-variant);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+.container__card:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3)
+}
+
+.card__title {
+    margin: 2rem 1rem;
+    text-align: left;
+}
+
+.card__body {
+    text-align: left;
+}
+
+.card__icons {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    margin: 1rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+
+}
+
+.card__icon {
+    margin: 0.3rem;
+    display: inline;
+}
+
+
+
+/* End of Card */
+
+
+/* CardList */
+
+
+.cardList__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+
+
+/* End of CardList */
+
+
+/* Add Note */
+
+.container__addNote {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-42%, -42%) scale(1.5); */
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: 10000ms;
+}
+
+.form__addNote .container__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__addNote .container__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__addNote .container__card input {
+    background-color: transparent;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.form__addNote .container__card textarea {
+    background-color: transparent;
+    resize: none;
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+}
+
+.form__active input {
+    animation: blinker 3000ms linear;
+}
+
+.form__active textarea {
+    animation: blinker 3000ms linear;
+}
+
+.button__form {
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    padding: 1.2rem;
+    border: 1px solid var(--color-bg-variant);
+    transition: var(--transition);
+}
+
+.button__form:hover {
+    filter: brightness(70%);
+    cursor: pointer;
+}
+
+
+/* End of Add Note */
+
+
+
+
+
+
+
+
+
+
+/* ============ MEDIA QUERIES (SMALL DEVICES) ============ */
+
+@media screen and (max-width: 600px) {
+    .app-title {
+        font-size: 4rem;
+        margin-top: 4rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /*keyFrames  */
+    @keyframes blinker {
+        0% {
+            opacity: 0;
+        }
+
+        20% {
+            opacity: 1;
+        }
+
+        40% {
+            opacity: 0;
+        }
+
+        60% {
+            opacity: 1;
+        }
+
+        80% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+
+    }
