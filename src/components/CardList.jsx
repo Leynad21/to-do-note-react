@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Card from './card'
+import Card from './Card'
 import { useContext } from 'react'
 import ToDoContext from '../context/toDoContext'
 
