@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { BsFillPlusSquareFill } from 'react-icons/bs'
+import ToDoContext from '../context/toDoContext'
 
-const AddButton = ({ getClicked, settoDoEdit }) => {
-    const [clicked, setClicked] = useState(false)
+const AddButton = () => {
+
+    const { clicked, setClicked, settoDoEdit } = useContext(ToDoContext)
 
     const handleClick = () => {
-        getClicked(clicked)
         setClicked(!clicked)
         settoDoEdit(prevValue => {
             return {

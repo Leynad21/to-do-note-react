@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdDeleteForever } from 'react-icons/md'
 import { AiTwotoneEdit } from 'react-icons/ai'
+import ToDoContext from "../context/toDoContext";
 
-const Card = ({ title, description, id, deleteNote, editNote }) => {
+const Card = ({ title, description, id }) => {
+
+  const { deleteNote, editNote } = useContext(ToDoContext)
 
 
   return (

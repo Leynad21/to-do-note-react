@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import ToDoContext from '../context/toDoContext';
 
-const AddNote = ({ clicked, setClicked, addNote, toDoEdit, settoDoEdit, updateNote }) => {
+const AddNote = () => {
+
+    const { clicked, setClicked, addNote, toDoEdit, settoDoEdit, updateNote } = useContext(ToDoContext)
 
     const [note, setNote] = useState({
         title: "",
         description: "",
     });
+
 
 
     useEffect(() => {

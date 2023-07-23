@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import Card from './card'
+import { useContext } from 'react'
+import ToDoContext from '../context/toDoContext'
 
-const CardList = ({ toDoList, deleteNote, editNote }) => {
+const CardList = () => {
 
+    const { toDoList } = useContext(ToDoContext)
 
     return (
         <div className='cardList__container'>
@@ -13,8 +16,6 @@ const CardList = ({ toDoList, deleteNote, editNote }) => {
                         id={index}
                         title={iter.title}
                         description={iter.description}
-                        deleteNote={deleteNote}
-                        editNote={editNote}
                     />
                 )
             }
