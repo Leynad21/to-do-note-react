@@ -20,7 +20,7 @@ function App() {
           <AddNote />
         </div>
         <div className={clicked && "overlay"}>
-          <h1 className='app-title'>To Do List</h1>
+          <h1 className='app-title'>My Notes</h1>
           <CardList />
         </div>
       </div>
